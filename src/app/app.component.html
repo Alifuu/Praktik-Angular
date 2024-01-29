@@ -1,0 +1,48 @@
+<div> 
+   
+ <!-- Binding -->
+<h1> {{title}} </h1>
+<h2> {{name}} </h2>
+<input type="text" value="Nama saya Fajar">
+<input [disabled] ="isDisabled" type="text" value="Nama saya Fajar">
+<p class="text-berhasil"> Class Binding </p>
+<p [style.color] ="hasError ? 'red' : 'green'"> Style Binding </p>
+
+<!-- Form -->
+<form (submit)="onSubmit()">
+    <label for="inputText">Masukkan teks:</label>
+    <input type="text" id="inputText"/>
+      <button type="submit">Kirim</button>
+  </form>
+
+  <!-- Key up Enter -->
+  <!-- <input type="text" (keydown.enter)="onEnterKeyPressed($event)"> -->
+
+  <!-- Scroll -->
+<button> klik </button>
+<div class="konten" (scroll)="onScroll($event)"></div>
+
+<!-- Key Up -->
+<input (keyup)="onKeyUp($event)">
+
+<!-- Mapping Data metode *ngfor -->
+<!-- <h2>List of Users:</h2>
+<ul>
+  <li *ngfor="let user of users">{{ user.name }}</li>
+</ul> -->
+</div>
+
+<!-- State -->
+<h2> {{pesan}}</h2>
+<button (click)="ubah()"> Ubah pesan</button>
+
+<!-- redux -->
+<!-- <h1>{{pesan$ | async }}</h1>
+<button (click)="ubahPesan()"> ganti pesan</button> -->
+<!-- Routing -->
+<div>
+    <a routerlink="/lifecycles"> lifecycles </a>
+    <a routerlink="/CRUD"> CRUD </a>
+</div>
+
+<!-- <router-outlet></router-outlet> -->
